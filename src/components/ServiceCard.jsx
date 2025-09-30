@@ -15,7 +15,7 @@ export default function ServiceCard(props) {
     <div
       onMouseEnter={showOnHover}
       onMouseLeave={clearOnHover}
-      className="bg-teal-700 text-white w-84 h-48 py-8 text-center"
+      className="bg-teal-700 text-white w-84 h-48 py-8 text-center hover:bg-teal-900"
     >
       <h3 className="text-xl font-bold">{props.title}</h3>
       {isHovered && <p className="p-4 text-lg">{props.text}</p>}
