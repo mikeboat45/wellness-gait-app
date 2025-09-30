@@ -2,26 +2,23 @@ import { useState } from "react";
 
 export default function ServiceCard(props) {
   const [isHovered, setIsHovered] = useState(false);
-  const [details, setDetails] = useState(null);
 
   const showOnHover = () => {
     setIsHovered(true);
-    setDetails("lorem sdsmsds serem ses sdfe");
   };
 
   const clearOnHover = () => {
     setIsHovered(false);
-    setDetails(null);
   };
 
   return (
     <div
       onMouseEnter={showOnHover}
       onMouseLeave={clearOnHover}
-      className="bg-teal-700 text-white group w-72 h-36 py-8 text-center"
+      className="bg-teal-700 text-white w-84 h-48 py-8 text-center"
     >
-      <h3 className="text-xl">{props.title}</h3>
-      {setIsHovered && <p>{setDetails}</p>}
+      <h3 className="text-xl font-bold">{props.title}</h3>
+      {isHovered && <p className="p-4 text-lg">{props.text}</p>}
     </div>
   );
 }
