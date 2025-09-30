@@ -6,7 +6,7 @@ export default function Services() {
       <h2 className="pb-8 font-bold text-teal-700 text-4xl">
         Services we offer..
       </h2>
-      <div className="grid grid-cols-2 gap-8">
+      <div className="grid grid-cols-2 gap-16 gap-x-32">
         <ServiceCard
           title="Deep Massages"
           text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, laborum?"
