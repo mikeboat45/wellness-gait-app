@@ -11,7 +11,7 @@ export default function PatientIntakeForm() {
       className="bg-cover bg-center flex justify-center items-center w-full h-screen"
       style={{ backgroundImage: `url(${formBgImg})` }}
     >
-      <div className="bg-teal-700/30 text-white w-1/2 h-3/4 rounded-xl ">
+      <div className="bg-teal-700/30 text-black w-1/2 h-3/4 rounded-xl overflow-y-auto">
         <form action="" className="flex flex-col gap-4 p-4">
           <h2 className="font-semibold text-black text-xl">
             Request an appointment
@@ -48,6 +48,16 @@ export default function PatientIntakeForm() {
             placeholder="Write a full description of your complaint..."
             className="bg-black/70 h-24 text-white rounded-md pl-2"
           ></textarea>
+          <div className="flex items-start ">
+            <input type="checkbox" name="t&c" id="t&c" />
+            <label htmlFor="consent" className="text-sm italic">
+              By submitting this request, I confirm that the information
+              provided is accurate to the best of my knowledge and I consent to
+              be contacted by The Wellness Gait Center to discuss my physical
+              therapy needs and schedule an appointment.
+              <span className="text-red-700 font-bold">*</span>
+            </label>
+          </div>
           <Button text="Submit" /> {/* to signup form */}
         </form>
       </div>
