@@ -8,7 +8,7 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col bg-blue-100 shadow-md border-teal-700  items-center pt-8 pb-2 justify-between border-t-2 fixed bottom-0 z-50 w-full">
+    <footer className="flex flex-col bg-blue-100 shadow-md border-teal-700  items-center pt-8 pb-2 justify-between border-t-2 bottom-0  w-full">
       <div className="space-x-6 pb-4">
         <FontAwesomeIcon
           icon={faFacebook}

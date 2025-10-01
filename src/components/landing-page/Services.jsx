@@ -7,7 +7,7 @@ export default function Services() {
   });
 
   return (
-    <section className="flex flex-col items-center p-8">
+    <section className="flex flex-col items-center p-8 bg-blue-50">
       <h2 className="pb-8 font-bold text-teal-700 text-4xl">
         Services we offer..
       </h2>
