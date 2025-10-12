@@ -5,10 +5,11 @@ import "./index.css";
 // import SignUp from "./components/forms/SignUpForm";
 // import PatientForm from "./components/forms/PatientIntake";
 // import PatientRequest from "./components/forms/PatientRequest";
-import Dashboard from "./components/dashboard/DashPage";
+import LandingPage from "./components/landing-page/LandingPage";
+// import Dashboard from "./components/dashboard/DashPage";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <Dashboard />
+    <LandingPage />
   </StrictMode>
 );

@@ -1,8 +1,8 @@
-import { data } from "../../assets/data.js";
+import { servicesData } from "../../assets/data.js";
 import ServiceCard from "./ServiceCard";
 
 export default function Services() {
-  const dataset = data.map((dataObject) => {
+  const dataset = servicesData.map((dataObject) => {
     return <ServiceCard key={dataObject.id} {...dataObject} />;
   });
 
