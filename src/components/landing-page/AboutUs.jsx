@@ -1,10 +1,10 @@
 export default function About() {
   return (
     <section className="bg-teal-700 py-4">
-      <div className="flex flex-col items-center justify-center ">
-        <h1 className="text-white text-2xl pb-2 pt-8">About Us</h1>
-        <div className="bg-blue-50  flex items-center justify-center w-2xl rounded-xl">
-          <p className="text-teal-700 p-8 flex justify-center text-center font-medium text-xl">
+      <div className="flex flex-col items-center justify-center px-4">
+        <h1 className="text-white text-xl sm:text-2xl pb-2 pt-8">About Us</h1>
+        <div className="bg-blue-50 flex items-center justify-center w-full md:max-w-2xl rounded-xl">
+          <p className="text-teal-700 p-4 sm:p-6 md:p-8 flex justify-center text-center font-medium text-base sm:text-lg md:text-xl">
             Your body has an incredible capacity to heal. Our purpose is to be
             your partner and guide, helping you unlock your full potential and
             get back to living without limits. We're here to help you rebuild
@@ -13,10 +13,10 @@ export default function About() {
           </p>
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center ">
-        <h1 className="text-white  text-2xl pb-2 pt-8">Mission</h1>
-        <div className="bg-blue-50  flex items-center justify-center w-2xl h-48 rounded-xl">
-          <p className="text-teal-700 p-8 flex justify-center text-center font-medium text-xl">
+      <div className="flex flex-col items-center justify-center px-4">
+        <h1 className="text-white  text-xl sm:text-2xl pb-2 pt-8">Mission</h1>
+        <div className="bg-blue-50  flex items-center justify-center w-full md:max-w-2xl h-48 rounded-xl">
+          <p className="text-teal-700 p-4 sm:p-6 md:p-8 flex justify-center text-center font-medium text-base sm:text-lg md:text-xl">
             Our Mission is to empower individuals to achieve optimal physical
             health and well-being through personalized, evidence-based physical
             therapy, fostering recovery, restoring function, and promoting a
@@ -24,10 +24,10 @@ export default function About() {
           </p>
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center mb-8">
-        <h1 className="text-white text-2xl pb-2 pt-8">Vision</h1>
-        <div className="bg-blue-50  flex items-center justify-center w-2xl rounded-xl">
-          <p className="text-teal-700 p-8 flex justify-center text-center font-medium text-xl">
+      <div className="flex flex-col items-center justify-center mb-8 px-4">
+        <h1 className="text-white text-xl sm:text-2xl pb-2 pt-8">Vision</h1>
+        <div className="bg-blue-50  flex items-center justify-center w-full md:max-w-2xl rounded-xl">
+          <p className="text-teal-700 p-4 sm:p-6 md:p-8 flex justify-center text-center font-medium text-base sm:text-lg md:text-xl">
             Our Vision is to be the leading partner in transformative physical
             wellness, recognized for clinical excellence, innovative care, and a
             compassionate environment where every patient reclaims their
