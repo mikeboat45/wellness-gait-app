@@ -3,7 +3,7 @@ import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 export default function RequestCard() {
   return (
-    <div className="border-2 border-teal-800 pb-4 w-1/5 rounded-2xl m-4">
+    <div className="border-2 border-teal-800 pb-4 w-full lg:w-1/5 rounded-2xl">
       <div className="border-2 border-teal-800 bg-teal-800  py-16 text-center rounded-xl mb-6 text-2xl text-white font-medium">
         REQUEST a service
       </div>
