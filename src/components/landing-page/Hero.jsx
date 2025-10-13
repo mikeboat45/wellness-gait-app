@@ -1,5 +1,5 @@
-import Button from "./Button";
 import bgImage from "../../assets/gait-app-bg.jpg";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
@@ -13,7 +13,7 @@ export default function Hero() {
           Your journey to recovery starts with us!
         </p>
         <div className="pt-5 sm:pt-10 md:pt-20">
-          <Button text="Book an Appointment" />
+          <Link to="/book-appointment" className="bg-teal-800 text-white text-lg px-5 py-2 rounded-xl border-0 hover:bg-teal-900">Book an Appointment</Link>
         </div>
       </div>
     </section>
