@@ -1,10 +1,30 @@
+import { useState } from "react";
+import { supabase } from "../../supabaseClient";
 import Button from "../landing-page/Button";
 import Footer from "../landing-page/Footer";
 import logo from "../../assets/wellness-logo.PNG";
 import signUpImage from "../../assets/sign_in-image.jpg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function SignUpForm() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const { error } = await supabase.auth.signUp({
+        email,
+        password,
+      });
+      if (error) throw error;
+      navigate("/login?message=Check your email for a verification link.");
+    } catch (error) {
+      alert(error.error_description || error.message);
+    }
+  };
+
   return (
     <>
       <div
@@ -19,7 +39,7 @@ export default function SignUpForm() {
             Let's create your account
           </p>
           <hr className="w-full" />
-          <form action="" className="flex flex-col gap-2 w-full">
+          <form onSubmit={handleSubmit} className="flex flex-col gap-2 w-full">
             <label htmlFor="email">Email</label>
             <input
               type="email"
@@ -28,6 +48,8 @@ export default function SignUpForm() {
               className="w-full border-2 border-teal-700 rounded-xl py-2 px-1"
               required
               placeholder="e.g. hello@example.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
             <label htmlFor="password">Password</label>
             <input
@@ -37,9 +59,11 @@ export default function SignUpForm() {
               placeholder="password"
               required
               className="w-full mb-4 border-2 border-teal-700 rounded-xl py-2 px-1"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
+            <Button text="Sign Up" />
           </form>
-          <Button text="Sign Up" />
           <p className="text-center mt-4">
             Already have an account?&nbsp;
             <Link to="/login" className="text-teal-700 font-semibold hover:text-teal-900">

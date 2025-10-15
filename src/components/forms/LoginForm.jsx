@@ -1,9 +1,30 @@
+import { useState } from "react";
+import { supabase } from "../../supabaseClient";
 import Button from "../landing-page/Button";
 import Footer from "../landing-page/Footer";
 import logo from "../../assets/wellness-logo.PNG";
 import loginImg from "../../assets/login-img.jpg";
+import { useNavigate } from "react-router-dom";
 
 export default function LoginForm() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const { error } = await supabase.auth.signInWithPassword({
+        email,
+        password,
+      });
+      if (error) throw error;
+      navigate("/dashboard");
+    } catch (error) {
+      alert(error.error_description || error.message);
+    }
+  };
+
   return (
     <>
       <div
@@ -19,7 +40,7 @@ export default function LoginForm() {
               Sign in to your account to view appointments.
             </p>
             <hr className="text-white mt-4" />
-            <form action="" className="flex flex-col gap-2 pt-4">
+            <form onSubmit={handleSubmit} className="flex flex-col gap-2 pt-4">
               <label htmlFor="email">Email</label>
               <input
                 type="email"
@@ -28,6 +49,8 @@ export default function LoginForm() {
                 className="w-full border-2 border-teal-700 rounded-xl py-2 px-1"
                 required
                 placeholder="e.g. hello@example.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
               <label htmlFor="password">Password</label>
               <input
@@ -37,10 +60,12 @@ export default function LoginForm() {
                 placeholder="password"
                 required
                 className="w-full mb-4 border-2 border-teal-700 rounded-xl py-2 px-1"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
               />
+              <Button text="Sign In" />
             </form>
           </div>
-          <Button text="Sign In" />
         </div>
       </div>
       <Footer />
