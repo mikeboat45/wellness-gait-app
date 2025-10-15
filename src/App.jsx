@@ -6,6 +6,7 @@ import PatientIntakeForm from "./components/forms/PatientIntake";
 import PatientRequest from "./components/forms/PatientRequest";
 import DashPage from "./components/dashboard/DashPage";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
+import Profile from "./components/dashboard/Profile";
 
 export default function App() {
   return (
@@ -25,6 +26,10 @@ export default function App() {
         <Route
           path="/dashboard/request-service"
           element={<ProtectedRoute><PatientRequest /></ProtectedRoute>}
+        />
+        <Route
+          path="/dashboard/profile"
+          element={<ProtectedRoute><Profile /></ProtectedRoute>}
         />
       </Routes>
     </BrowserRouter>
