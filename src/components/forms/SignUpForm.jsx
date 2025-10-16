@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useForm } from "react-hook-form";
 import { supabase } from "../../supabaseClient";
 import Button from "../landing-page/Button";
 import Footer from "../landing-page/Footer";
@@ -7,16 +7,14 @@ import signUpImage from "../../assets/sign_in-image.jpg";
 import { Link, useNavigate } from "react-router-dom";
 
 export default function SignUpForm() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const { register, handleSubmit, formState: { errors } } = useForm();
   const navigate = useNavigate();
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const onSubmit = async (data) => {
     try {
       const { error } = await supabase.auth.signUp({
-        email,
-        password,
+        email: data.email,
+        password: data.password,
       });
       if (error) throw error;
       navigate("/login?message=Check your email for a verification link.");
@@ -39,30 +37,25 @@ export default function SignUpForm() {
             Let's create your account
           </p>
           <hr className="w-full" />
-          <form onSubmit={handleSubmit} className="flex flex-col gap-2 w-full">
+          <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-2 w-full">
             <label htmlFor="email">Email</label>
             <input
-              type="email"
               id="email"
-              name="email"
+              {...register("email", { required: true, pattern: /^\S+@\S+$/i })}
               className="w-full border-2 border-teal-700 rounded-xl py-2 px-1"
-              required
               placeholder="e.g. hello@example.com"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
             />
+            {errors.email && <span className="text-red-500">Please enter a valid email</span>}
             <label htmlFor="password">Password</label>
             <input
               type="password"
               id="password"
-              name="password"
+              {...register("password", { required: true, minLength: 6 })}
               placeholder="password"
-              required
               className="w-full mb-4 border-2 border-teal-700 rounded-xl py-2 px-1"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
             />
-            <Button text="Sign Up" />
+            {errors.password && <span className="text-red-500">Password must be at least 6 characters</span>}
+            <Button text="Sign Up" type="submit" />
           </form>
           <p className="text-center mt-4">
             Already have an account?&nbsp;

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useForm } from "react-hook-form";
 import { supabase } from "../../supabaseClient";
 import Button from "../landing-page/Button";
 import Footer from "../landing-page/Footer";
@@ -7,16 +7,18 @@ import loginImg from "../../assets/login-img.jpg";
 import { useNavigate } from "react-router-dom";
 
 export default function LoginForm() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
   const navigate = useNavigate();
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const onSubmit = async (data) => {
     try {
       const { error } = await supabase.auth.signInWithPassword({
-        email,
-        password,
+        email: data.email,
+        password: data.password,
       });
       if (error) throw error;
       navigate("/dashboard");
@@ -40,30 +42,32 @@ export default function LoginForm() {
               Sign in to your account to view appointments.
             </p>
             <hr className="text-white mt-4" />
-            <form onSubmit={handleSubmit} className="flex flex-col gap-2 pt-4">
+            <form
+              onSubmit={handleSubmit(onSubmit)}
+              className="flex flex-col gap-2 pt-4"
+            >
               <label htmlFor="email">Email</label>
               <input
-                type="email"
                 id="email"
-                name="email"
+                {...register("email", { required: true, pattern: /^\S+@\S+$/i })}
                 className="w-full border-2 border-teal-700 rounded-xl py-2 px-1"
-                required
                 placeholder="e.g. hello@example.com"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
               />
+              {errors.email && (
+                <span className="text-red-500">Please enter a valid email</span>
+              )}
               <label htmlFor="password">Password</label>
               <input
                 type="password"
                 id="password"
-                name="password"
+                {...register("password", { required: true })}
                 placeholder="password"
-                required
                 className="w-full mb-4 border-2 border-teal-700 rounded-xl py-2 px-1"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
               />
-              <Button text="Sign In" />
+              {errors.password && (
+                <span className="text-red-500">Password is required</span>
+              )}
+              <Button text="Sign In" type="submit" />
             </form>
           </div>
         </div>
