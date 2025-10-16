@@ -1,12 +1,14 @@
 import { useState, useEffect } from 'react';
 import { supabase } from '../../supabaseClient';
 import Button from '../landing-page/Button';
+import { useNavigate } from 'react-router-dom';
 
 export default function Profile() {
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState(null);
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
+  const navigate = useNavigate();
 
   useEffect(() => {
     async function fetchProfile() {
@@ -50,6 +52,17 @@ export default function Profile() {
     setLoading(false);
   }
 
+  async function handleLogout() {
+    setLoading(true);
+    const { error } = await supabase.auth.signOut();
+    if (error) {
+      alert(error.message);
+    } else {
+      navigate('/login');
+    }
+    setLoading(false);
+  }
+
   return (
     <div className="p-4">
       <h1 className="text-2xl font-bold mb-4">Your Profile</h1>
@@ -87,8 +100,9 @@ export default function Profile() {
               className="w-full border-2 border-teal-700 rounded-xl py-2 px-1"
             />
           </div>
-          <div>
+          <div className="flex gap-4">
             <Button text={loading ? 'Updating...' : 'Update Profile'} disabled={loading} />
+            <Button text="Logout" onClick={handleLogout} disabled={loading} />
           </div>
         </form>
       )}
