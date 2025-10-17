@@ -12,24 +12,26 @@ export default function Footer() {
       <div className="space-x-2 sm:space-x-6 pb-4">
         <FontAwesomeIcon
           icon={faFacebook}
-          className="text-teal-700 hover:text-teal-900 text-xl sm:text-2xl"
+          className="text-teal-700 hover:text-teal-900 text-xl sm:text-2xl hover:scale-115"
         />
         <FontAwesomeIcon
           icon={faInstagram}
-          className="text-teal-700 hover:text-teal-900 text-xl sm:text-2xl"
+          className="text-teal-700 hover:text-teal-900 text-xl sm:text-2xl hover:scale-115"
         />
         <FontAwesomeIcon
           icon={faYoutube}
-          className="text-teal-700 hover:text-teal-900 text-xl sm:text-2xl"
+          className="text-teal-700 hover:text-teal-900 text-xl sm:text-2xl hover:scale-115"
         />
         <FontAwesomeIcon
           icon={faLinkedin}
-          className="text-teal-700 hover:text-teal-900 text-xl sm:text-2xl"
+          className="text-teal-700 hover:text-teal-900 text-xl sm:text-2xl hover:scale-115"
         />
       </div>
-      <p className="text-teal-700 text-sm sm:text-base">
-        The Wellness Gait Center&trade; Copyright 2025
-      </p>
+      <div className="flex flex-col sm:flex-row gap-4 items-center">
+        <p className="text-teal-700 text-sm sm:text-base">
+          The Wellness Gait Center&trade; Copyright 2025
+        </p>
+      </div>
     </footer>
   );
 }

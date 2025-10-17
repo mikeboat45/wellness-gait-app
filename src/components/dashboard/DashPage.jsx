@@ -60,7 +60,7 @@ export default function DashPage() {
     <>
       <Navbar />
       <main className="flex flex-col bg-blue-50">
-        <h1 className="font-medium text-center text-2xl p-4">
+        <h1 className="font-medium text-center text-4xl p-4 my-8">
           Welcome back,{" "}
           <span className="text-teal-700">{profile?.first_name || ""}!</span>
         </h1>
@@ -78,16 +78,16 @@ export default function DashPage() {
           </div>
         </div>
         <div className="mt-4">
-          <h2 className="text-teal-700 px-4 pt-2 pb-1 font-semibold text-2xl text-center">
+          <h2 className="text-teal-700 px-4 pt-2 pb-1 font-semibold text-4xl text-center">
             Resources
           </h2>
-          <h3 className="text-teal-700 px-4 pt-2 pb-1 font-medium text-xl text-center">
+          <h3 className="text-teal-700 px-4 pt-2 pb-1 font-medium text-2xl text-center">
             Videos
           </h3>
           <div className="flex overflow-x-auto gap-4 px-4 pt-4 pb-6">
             {resourceInfo}
           </div>
-          <h3 className="text-teal-700 px-4 pt-2 pb-1 font-medium text-xl text-center">
+          <h3 className="text-teal-700 px-4 pt-4 pb-1 font-medium text-2xl text-center">
             Blog Articles
           </h3>
           <div className="flex overflow-x-auto gap-4 px-4 py-6">

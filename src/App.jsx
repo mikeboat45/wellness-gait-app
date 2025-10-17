@@ -7,6 +7,8 @@ import PatientRequest from "./components/forms/PatientRequest";
 import DashPage from "./components/dashboard/DashPage";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
 import Profile from "./components/dashboard/Profile";
+import ContactUs from "./components/landing-page/ContactUs";
+import ContactCard from "./components/landing-page/ContactCard";
 
 export default function App() {
   return (
@@ -17,6 +19,7 @@ export default function App() {
         <Route path="/login" element={<LoginForm />} />
         <Route path="/signup" element={<SignUpForm />} />
         <Route path="/book-appointment" element={<PatientIntakeForm />} />
+        <Route path="/contact" element={<ContactUs />} />
 
         {/* Authenticated Routes */}
         <Route
@@ -30,6 +33,10 @@ export default function App() {
         <Route
           path="/dashboard/profile"
           element={<ProtectedRoute><Profile /></ProtectedRoute>}
+        />
+        <Route
+          path="/contact-card"
+          element={<ProtectedRoute><ContactCard /></ProtectedRoute>}
         />
       </Routes>
     </BrowserRouter>

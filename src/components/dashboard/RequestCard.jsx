@@ -1,22 +1,24 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import Button from "../landing-page/Button";
 
 export default function RequestCard() {
   return (
-    <div className="border-2 border-teal-800 pb-4 rounded-2xl">
-      <Link to="/dashboard/request-service">
-        <div className="border-2 border-teal-800 bg-teal-800  py-16 text-center rounded-xl mb-6 text-2xl text-white font-medium hover:bg-teal-900">
-          REQUEST a service
-        </div>
-      </Link>
-      <div className="flex justify-around items-center">
-        <button className="px-4 py-2 border-2 text-teal-800 font-medium border-teal-800 rounded-xl hover:bg-teal-800 hover:text-white">
-          <FontAwesomeIcon icon={faPhone} /> Call Now
-        </button>
-        <button className="px-4 py-2 border-2 text-teal-800 font-medium border-teal-800 rounded-xl hover:bg-teal-800 hover:text-white">
-          <FontAwesomeIcon icon={faEnvelope} /> Send Email
-        </button>
+    <div className="border-2 border-teal-800 rounded-xl shadow-lg p-6">
+      <h3 className="font-semibold text-xl mb-2 text-teal-700">
+        Request a new service
+      </h3>
+      <hr className="text-teal-700 mb-2" />
+      <p className="text-gray-600 mb-6">
+        Need a follow-up consultation or a new therapy session? Let us know how
+        we can help.
+      </p>
+      <div className="flex flex-col sm:flex-row gap-4">
+        <Link to="/contact-card">
+          <Button text="Email Us" />
+        </Link>
+        <Link to="/contact-card">
+          <Button text="Call Us" />
+        </Link>
       </div>
     </div>
   );

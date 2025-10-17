@@ -1,14 +1,14 @@
 export default function BlogResources(props) {
   return (
     <>
-      <div className="border-2 border-teal-800  rounded-2xl flex flex-col h-72  ">
+      <div className="rounded-2xl flex flex-col h-72 bg-blue-100 shadow-md shadow-blue-200">
         <img
           src={props.img.src}
           alt={props.img.alt}
-          className="h-36 rounded-2xl block m-2"
+          className="h-36 rounded-2xl block"
         />
-        <h4 className="p-4 ">{props.title}</h4>
-        <p className="p-4 ">{props.info}</p>
+        <h4 className="px-4 py-2">{props.title}</h4>
+        <p className="px-4 ">{props.info}</p>
       </div>
     </>
   );

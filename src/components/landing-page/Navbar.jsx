@@ -40,12 +40,20 @@ export default function Navbar() {
       <img src={logo} alt="wellness-logo" className="w-32 h-16" />
       <div className="flex flex-col sm:flex-row gap-2">
         {session ? (
-          <button
-            onClick={handleLogout}
-            className="bg-teal-800 text-white text-lg px-5 py-2 rounded-xl border-0 hover:bg-teal-900"
-          >
-            Logout
-          </button>
+          <>
+            <Link
+              to="/dashboard"
+              className="bg-teal-800 text-white text-lg px-5 py-2 rounded-xl border-0 hover:bg-teal-900"
+            >
+              Dashboard
+            </Link>
+            <button
+              onClick={handleLogout}
+              className="bg-teal-800 text-white text-lg px-5 py-2 rounded-xl border-0 hover:bg-teal-900"
+            >
+              Logout
+            </button>
+          </>
         ) : (
           <>
             <Link
