@@ -12,12 +12,15 @@ export default function RequestCard() {
         Need a follow-up consultation or a new therapy session? Let us know how
         we can help.
       </p>
-      <div className="flex flex-col sm:flex-row gap-4">
+      <div className="flex flex-col sm:flex-row gap-4 justify-between">
         <Link to="/contact-card">
           <Button text="Email Us" />
         </Link>
         <Link to="/contact-card">
           <Button text="Call Us" />
+        </Link>
+        <Link to="/dashboard/request-service">
+          <Button text="Booking" />
         </Link>
       </div>
     </div>

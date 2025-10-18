@@ -34,8 +34,8 @@ export const resourceVideoData = [
       src: img1,
       alt: "placeholder",
     },
-    title: "Title One",
-    info: "Lorem ipsum dolor sit amet.",
+    title: "The 5 Essential Phases of Injury Recovery",
+    info: "A clear, structured guide explaining the critical steps you must follow to fully recover from injury",
   },
   {
     id: 2,
@@ -43,8 +43,8 @@ export const resourceVideoData = [
       src: img2,
       alt: "placeholder",
     },
-    title: "Title Two",
-    info: "Lorem ipsum dolor sit amet.",
+    title: "Fix Your Tech Neck: 10-Minute Desk Mobility Routine",
+    info: "Simple, effective exercises to relieve neck pain, improve posture, and counteract strain from screen time",
   },
   {
     id: 3,
@@ -52,8 +52,8 @@ export const resourceVideoData = [
       src: img3,
       alt: "placeholder",
     },
-    title: "Title Three",
-    info: "Lorem ipsum dolor sit amet.",
+    title: "Mastering Pain-Free Sleep: Best Positions for Back and Joints",
+    info: "Learn expert sleeping strategies and pillow techniques to reduce joint stress and wake up feeling refreshed.",
   },
   {
     id: 4,
@@ -61,8 +61,8 @@ export const resourceVideoData = [
       src: img4,
       alt: "placeholder",
     },
-    title: "Title four",
-    info: "Lorem ipsum dolor sit amet.",
+    title: "Postural Power-Up: The 5 Best Exercises for Core Stability",
+    info: "Build deep core strength and muscle endurance to prevent future injuries and significantly improve your posture.",
   },
   {
     id: 5,
@@ -70,8 +70,9 @@ export const resourceVideoData = [
       src: img5,
       alt: "placeholder",
     },
-    title: "Title Three",
-    info: "Lorem ipsum dolor sit amet.",
+    title:
+      "Breathing for Resilience: A Physio's Guide to Diaphragmatic Training",
+    info: "Utilize simple breathing techniques to reduce stress, manage chronic pain, and optimize your nervous system function.",
   },
 ];
 
@@ -82,8 +83,8 @@ export const resourceBlogData = [
       src: img1,
       alt: "placeholder",
     },
-    title: "Title One",
-    info: "Lorem ipsum dolor sit amet.",
+    title: "The Guide to Avoiding Re-Injury",
+    info: "Learn the four common pitfalls that derail recovery and how to ensure your healing process is complete and lasting.",
   },
   {
     id: 2,
@@ -91,8 +92,9 @@ export const resourceBlogData = [
       src: img2,
       alt: "placeholder",
     },
-    title: "Title Two",
-    info: "Lorem ipsum dolor sit amet.",
+    title:
+      "5 Simple Stretches for Hip Flexor Relief (Stop Wasting Time on Ineffective Moves)",
+    info: "Target tight hip flexors with these five proven physiotherapy exercises, perfect for sitting too long and improving mobility.",
   },
   {
     id: 3,
@@ -100,8 +102,8 @@ export const resourceBlogData = [
       src: img3,
       alt: "placeholder",
     },
-    title: "Title Three",
-    info: "Lorem ipsum dolor sit amet.",
+    title: "Diet, Sleep, and Movement Hacks for Chronic Pain",
+    info: "Understand the link between lifestyle and inflammation. Find actionable changes for reducing swelling and chronic joint discomfort naturally.",
   },
   {
     id: 4,
@@ -109,8 +111,9 @@ export const resourceBlogData = [
       src: img4,
       alt: "placeholder",
     },
-    title: "Title four",
-    info: "Lorem ipsum dolor sit amet.",
+    title:
+      "Why Your Shoulder Hurts: Rotator Cuff Strengthening 101 for Desk Workers",
+    info: "A beginner's guide to rotator cuff health, offering simple strengthening exercises to stabilize your shoulder and prevent injury.",
   },
   {
     id: 5,
@@ -118,7 +121,7 @@ export const resourceBlogData = [
       src: img5,
       alt: "placeholder",
     },
-    title: "Title Three",
-    info: "Lorem ipsum dolor sit amet.",
+    title: "A Physiotherapist's Definitive Guide to Acute vs. Chronic Pain",
+    info: "Never guess again! We explain the science behind using heat or ice for different types of muscle and joint pain.",
   },
 ];
