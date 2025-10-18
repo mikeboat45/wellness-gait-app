@@ -11,6 +11,52 @@ This project involves building a responsive and user-friendly web app for a phys
 - User Dashbaord: Allow users to tract appointments, read doctors note and access to wellness resources
 - Appointment Request Form: Collects patient details for consultation scheduling.
 
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v18 or later)
+- npm
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/the-wellness-gait-app.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd the-wellness-gait-app
+   ```
+3. Install the dependencies:
+   ```bash
+   npm install
+   ```
+
+### Environment Variables
+
+To run this project, you will need to add the following environment variables to a `.env` file in the root of your project.
+
+`VITE_SUPABASE_URL`=your_supabase_url
+`VITE_SUPABASE_ANON_KEY`=your_supabase_anon_key
+
+Create a `.env` file in the root directory and add the following:
+
+```
+VITE_SUPABASE_URL="YOUR_SUPABASE_URL"
+VITE_SUPABASE_ANON_KEY="YOUR_SUPABASE_ANON_KEY"
+```
+
+### Running the Application
+
+To start the development server, run:
+
+```bash
+npm run dev
+```
+
+This will start the app on `http://localhost:5173`.
+
 ## Backend & API Integration
 
 ### Supabase
@@ -32,4 +78,8 @@ I integrate the Google Calendar API to handle scheduling and syncing of appointm
 
 ## Wireframe & Design Prototype
 
+[Figma Prototype](https://www.figma.com/design/bxeU2OesXanhG4cwPwsZZO/First-Design?node-id=2099-2&p=f)
+
 ## Deployment
+
+This project is deployed on Vercel. You can access the live application here: [The Wellness Gait App](https://the-wellness-gait-app.vercel.app/)
