@@ -1,13 +1,13 @@
-import backpain from "back-pain.jpg";
-import breathing from "breating.jpg";
-import corestability from "core-stability.jpg";
-import diet from "diet.jpg";
-import hipflexor from "hip-flexor.jpg";
-import neckpain from "neck-pain.jpg";
-import pain from "pain.jpg";
-import reinjury from "re-injury.jpg";
-import recovery from "recovery.jpg";
-import shoulder from "shoulder.jpg";
+import backpain from "./back-pain.jpg";
+import breathing from "./breathing.jpg";
+import corestability from "./core-stability.jpg";
+import diet from "./diet.jpg";
+import hipflexor from "./hip-flexor.jpg";
+import neckpain from "./neck-pain.jpg";
+import pain from "./pain.jpg";
+import reinjury from "./re-injury.jpg";
+import recovery from "./recovery.jpg";
+import shoulder from "./shoulder.jpg";
 
 export const servicesData = [
   {
