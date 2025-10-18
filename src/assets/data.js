@@ -1,8 +1,13 @@
-import img1 from "./img1.jpg";
-import img2 from "./img2.jpg";
-import img3 from "./img3.jpg";
-import img4 from "./img4.jpg";
-import img5 from "./img5.jpg";
+import backpain from "back-pain.jpg";
+import breathing from "breating.jpg";
+import corestability from "core-stability.jpg";
+import diet from "diet.jpg";
+import hipflexor from "hip-flexor.jpg";
+import neckpain from "neck-pain.jpg";
+import pain from "pain.jpg";
+import reinjury from "re-injury.jpg";
+import recovery from "recovery.jpg";
+import shoulder from "shoulder.jpg";
 
 export const servicesData = [
   {
@@ -31,8 +36,8 @@ export const resourceVideoData = [
   {
     id: 1,
     img: {
-      src: img1,
-      alt: "placeholder",
+      src: recovery,
+      alt: "recovery",
     },
     title: "The 5 Essential Phases of Injury Recovery",
     info: "A clear, structured guide explaining the critical steps you must follow to fully recover from injury",
@@ -40,8 +45,8 @@ export const resourceVideoData = [
   {
     id: 2,
     img: {
-      src: img2,
-      alt: "placeholder",
+      src: neckpain,
+      alt: "neck-pain",
     },
     title: "Fix Your Tech Neck: 10-Minute Desk Mobility Routine",
     info: "Simple, effective exercises to relieve neck pain, improve posture, and counteract strain from screen time",
@@ -49,8 +54,8 @@ export const resourceVideoData = [
   {
     id: 3,
     img: {
-      src: img3,
-      alt: "placeholder",
+      src: backpain,
+      alt: "backpain",
     },
     title: "Mastering Pain-Free Sleep: Best Positions for Back and Joints",
     info: "Learn expert sleeping strategies and pillow techniques to reduce joint stress and wake up feeling refreshed.",
@@ -58,8 +63,8 @@ export const resourceVideoData = [
   {
     id: 4,
     img: {
-      src: img4,
-      alt: "placeholder",
+      src: corestability,
+      alt: "corestability",
     },
     title: "Postural Power-Up: The 5 Best Exercises for Core Stability",
     info: "Build deep core strength and muscle endurance to prevent future injuries and significantly improve your posture.",
@@ -67,8 +72,8 @@ export const resourceVideoData = [
   {
     id: 5,
     img: {
-      src: img5,
-      alt: "placeholder",
+      src: breathing,
+      alt: "breathing",
     },
     title:
       "Breathing for Resilience: A Physio's Guide to Diaphragmatic Training",
@@ -80,8 +85,8 @@ export const resourceBlogData = [
   {
     id: 1,
     img: {
-      src: img1,
-      alt: "placeholder",
+      src: reinjury,
+      alt: "re-injury",
     },
     title: "The Guide to Avoiding Re-Injury",
     info: "Learn the four common pitfalls that derail recovery and how to ensure your healing process is complete and lasting.",
@@ -89,8 +94,8 @@ export const resourceBlogData = [
   {
     id: 2,
     img: {
-      src: img2,
-      alt: "placeholder",
+      src: hipflexor,
+      alt: "hip-flxor",
     },
     title:
       "5 Simple Stretches for Hip Flexor Relief (Stop Wasting Time on Ineffective Moves)",
@@ -99,8 +104,8 @@ export const resourceBlogData = [
   {
     id: 3,
     img: {
-      src: img3,
-      alt: "placeholder",
+      src: diet,
+      alt: "diet",
     },
     title: "Diet, Sleep, and Movement Hacks for Chronic Pain",
     info: "Understand the link between lifestyle and inflammation. Find actionable changes for reducing swelling and chronic joint discomfort naturally.",
@@ -108,8 +113,8 @@ export const resourceBlogData = [
   {
     id: 4,
     img: {
-      src: img4,
-      alt: "placeholder",
+      src: shoulder,
+      alt: "shoulder",
     },
     title:
       "Why Your Shoulder Hurts: Rotator Cuff Strengthening 101 for Desk Workers",
@@ -118,8 +123,8 @@ export const resourceBlogData = [
   {
     id: 5,
     img: {
-      src: img5,
-      alt: "placeholder",
+      src: pain,
+      alt: "pain",
     },
     title: "A Physiotherapist's Definitive Guide to Acute vs. Chronic Pain",
     info: "Never guess again! We explain the science behind using heat or ice for different types of muscle and joint pain.",
