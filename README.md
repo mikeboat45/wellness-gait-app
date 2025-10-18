@@ -40,7 +40,7 @@ To run this project, you will need to add the following environment variables to
 `VITE_SUPABASE_URL`=your_supabase_url
 `VITE_SUPABASE_ANON_KEY`=your_supabase_anon_key
 
-Create a `.env` file in the root directory and add the following:
+Create a new project in supabase. Create a `.env` file in the root directory and add the following:
 
 ```
 VITE_SUPABASE_URL="YOUR_SUPABASE_URL"
